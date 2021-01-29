@@ -1,0 +1,202 @@
+/* ---------------- /all Body/------------------------ */
+*,
+body {
+	margin: 0;
+	padding: 0;
+}
+body {
+	background-color: #52796f;
+}
+
+/* --------------/header navbar//Just css/-------------- */
+
+/* logo style--- */
+.menu .logo .logo1 {
+	float: left;
+	height: 80px;
+	padding: 10px 20px;
+}
+/* menu style --- */
+.menu {
+	width: 100%;
+	background-color: #84a98c;
+	color: #ffffff;
+	height: 80px;
+	position: fixed;
+	z-index: 4;
+}
+.menu > ul {
+	margin: 0;
+	padding: 0;
+	float: left;
+	list-style-type: none;
+}
+.menu > ul > li {
+	float: left;
+}
+.menu .search {
+	display: inline-block;
+	padding: 20px 40px;
+	height: 40px;
+	float: right;
+}
+/* menu items style --- */
+.items {
+	display: inline-block;
+	padding: 20px 60px;
+	line-height: 40px;
+	color: #fff;
+	text-decoration: none;
+	width: 200px;
+}
+.items:hover {
+	background: #354f52;
+	color: #fff;
+}
+
+/* dropdown style --------- */
+.dropdown-content {
+	position: absolute;
+	top: 80px; /*     this is height from navbar */
+	overflow: hidden;
+	background-color: #84a98c;
+	max-height: 0;
+}
+.dropdown-content a {
+	color: #fff;
+	text-decoration: none;
+	margin: auto;
+	padding: 10px 10px;
+	text-align: center;
+}
+
+.dropdown ul li a {
+	display: inline-block;
+	width: 200px;
+	padding: 10px 10px;
+	margin: auto;
+}
+.dropdown ul li:hover {
+	background-color: #354f52;
+	color: #fff;
+}
+.items:focus {
+	background-color: #354f52;
+}
+
+.menu ul li:hover .dropdown-content {
+	max-height: 400px;
+	transition: max-height 1s ease-in;
+}
+/* ------------------/Body/------------------  */
+.container .row {
+	margin: 5px 5px 5px 5px;
+}
+.container p {
+	margin: 40px;
+}
+.container h1 {
+	margin: 140px 10px 0px 10px;
+	text-align: center;
+}
+.container h1:hover {
+	transform: scale(2, 2);
+	transition: transform 2s ease-in;
+}
+.btn-primary {
+	background-color: #84a98c;
+	border: none;
+	width: 120px;
+}
+.btn-primary:hover {
+	background-color: #84a98c;
+	border: none;
+}
+.btn-primary:focus {
+	background-color: #84a98c;
+	border: none;
+	width: 120px;
+}
+.card {
+	background-color: #84a98c;
+	text-align: center;
+}
+.form-control {
+	background-color: #84a98c;
+}
+
+/* ------------------/Footer/------------------ */
+.container .buttons {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	margin: 80px 0px;
+}
+/* ----------------Responsive----------------- */
+
+@media (max-width: 1100px) {
+	.menu {
+		height: 160px;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+	}
+
+	.menu .search {
+		display: block;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+	.menu .logo .logo1 {
+		position: absolute;
+		top: 0px;
+		left: 0px;
+	}
+
+	.dropdown-content {
+		position: absolute;
+		top: 160px; /*     this is height from navbar */
+	}
+}
+@media (max-width: 610px) {
+	.items {
+		display: inline-block;
+		padding: 20px 20px;
+		line-height: 20px;
+		color: #fff;
+		text-decoration: none;
+		width: 120px;
+		font-size: .8em;
+	}
+
+	.dropdown ul li a {
+		width: 120px;
+		padding: 10px 10px;
+		margin: auto;
+		font-size: .8em;
+	}
+}
+
+@media (max-width: 480px) {
+	.menu .search {
+		font-size: .5em;
+	}
+	.items {
+		font-size: .6em;
+	}
+}
+@media (max-width: 360px) {
+	.menu .search {
+		font-size: .3em;
+	}
+	.items {
+		padding: 1px;
+		width: 60px;
+	}
+	.dropdown ul li a {
+		width: 60px;
+		font-size: .4em;
+	}
+}
